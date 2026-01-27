@@ -1,0 +1,173 @@
+/* ===============================
+   RESET GENERAL
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY
+================================ */
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f5f9;
+    color: #333;
+    overflow-x: hidden; /* evita scroll lateral */
+}
+
+/* ===============================
+   HEADER CON LOGO IMG
+================================ */
+.header-tech {
+    width: 100vw;
+    min-height: 280px;
+    background: linear-gradient(rgba(6, 32, 63, 0.93), rgba(10, 77, 140, 0.93));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 30px 20px;
+}
+
+.logo-img {
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+    .header-tech {
+        min-height: 220px;
+        padding: 20px 15px;
+    }
+
+    .logo-img {
+        max-width: 160px;
+    }
+
+    .header-content h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Contenido del header */
+.header-content {
+    padding: 20px;
+    z-index: 1;
+}
+
+.header-content h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.header-content p {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.nav {
+    width: 100%;
+    background-color: #0a3f6f;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.nav a {
+    color: #ffffff;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   CONTENEDOR GENERAL
+================================ */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* ===============================
+   SECCIONES / CARDS
+================================ */
+.card {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #0a4d8c;
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   SERVICIOS
+================================ */
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.servicio {
+    background-color: #f4f7fb;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    width: 100%;
+    background-color: #0a3f6f;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 40px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+
+    .header-tech {
+        min-height: 200px;
+        background-size: 280px;
+    }
+
+    .header-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        margin: 8px 12px;
+    }
+}
