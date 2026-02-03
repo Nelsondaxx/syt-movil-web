@@ -138,57 +138,66 @@ body {
 }
 
 /* ===============================
-   FORMULARIO DE CONTACTO
+   FORMULARIO DE CONTACTO (CORREGIDO)
 ================================ */
 .form-contacto {
     margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
-/* Rejilla para los campos superiores */
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* con este agregué dos columnas */
-    gap: 20px;
+    grid-template-columns: 1fr 1fr; /* Divide en 2 columnas iguales */
+    gap: 20px; /* Espacio entre columnas y filas */
+    margin-bottom: 20px;
 }
 
+/* Cada campo individual */
 .field {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: column; /* IMPORTANTE: Pone la etiqueta ARRIBA del input */
+    gap: 8px; /* Espacio entre la etiqueta y el input */
+}
+
+/* Clase especial para que el mensaje ocupe las 2 columnas */
+.full-width {
+    grid-column: span 2;
 }
 
 .form-contacto label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #0a4d8c;
+    color: #0a4d8c; /* Azul corporativo */
+    margin-left: 2px;
 }
 
 .form-contacto input,
 .form-contacto textarea {
-    width: 100%;
-    padding: 12px 15px;
+    width: 100%; /* Ocupar todo el espacio disponible */
+    padding: 12px;
     border-radius: 8px;
-    border: 1px solid #d1d9e6;
-    background-color: #fcfdfe;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
     font-family: inherit;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: border 0.3s ease;
 }
 
+/* Efecto al hacer clic */
 .form-contacto input:focus,
 .form-contacto textarea:focus {
     outline: none;
     border-color: #0a4d8c;
-    box-shadow: 0 0 0 3px rgba(10, 77, 140, 0.1);
     background-color: #fff;
+    box-shadow: 0 0 5px rgba(10, 77, 140, 0.2);
 }
 
+/* Botón centrado y estilizado */
 .btn-submit {
-    align-self: flex-start;
-    padding: 12px 50px;
+    display: block;
+    width: 100%;
+    max-width: 200px; /* Tamaño máximo del botón */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 12px;
     background-color: #0a4d8c;
     color: #ffffff;
     border: none;
@@ -196,24 +205,23 @@ body {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    transition: transform 0.2s, background-color 0.3s;
+    transition: background 0.3s ease;
 }
 
 .btn-submit:hover {
     background-color: #083a6a;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(10, 77, 140, 0.2);
 }
 
-/* Ajuste para móviles */
+/* ===============================
+   RESPONSIVE (MÓVILES)
+================================ */
 @media (max-width: 600px) {
     .form-grid {
-        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        grid-template-columns: 1fr; /* Una sola columna en celular */
     }
     
-    .btn-submit {
-        width: 100%; /* Botón ancho completo en móvil */
-        align-self: center;
+    .full-width {
+        grid-column: span 1; /* El mensaje también pasa a 1 columna */
     }
 }
 
@@ -251,5 +259,6 @@ footer {
         margin: 8px 12px;
     }
 }
+
 
 
