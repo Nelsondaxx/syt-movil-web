@@ -141,46 +141,80 @@ body {
    FORMULARIO DE CONTACTO
 ================================ */
 .form-contacto {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+    gap: 20px;
+}
+
+/* Rejilla para los campos superiores */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* con este agregué dos columnas */
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .form-contacto label {
-    font-weight: 500;
-    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0a4d8c;
 }
 
 .form-contacto input,
 .form-contacto textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d9e6;
+    background-color: #fcfdfe;
     font-family: inherit;
     font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
 .form-contacto input:focus,
 .form-contacto textarea:focus {
     outline: none;
     border-color: #0a4d8c;
+    box-shadow: 0 0 0 3px rgba(10, 77, 140, 0.1);
+    background-color: #fff;
 }
 
-.form-contacto button {
-    margin-top: 10px;
-    align-self: center;
-    padding: 10px 40px;
+.btn-submit {
+    align-self: flex-start;
+    padding: 12px 50px;
     background-color: #0a4d8c;
     color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
-.form-contacto button:hover {
+.btn-submit:hover {
     background-color: #083a6a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 77, 140, 0.2);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+    
+    .btn-submit {
+        width: 100%; /* Botón ancho completo en móvil */
+        align-self: center;
+    }
 }
 
 /* ===============================
@@ -217,4 +251,5 @@ footer {
         margin: 8px 12px;
     }
 }
+
 
