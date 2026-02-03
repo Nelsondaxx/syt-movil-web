@@ -138,6 +138,52 @@ body {
 }
 
 /* ===============================
+   FORMULARIO DE CONTACTO
+================================ */
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.form-contacto label {
+    font-weight: 500;
+    color: #333;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    outline: none;
+    border-color: #0a4d8c;
+}
+
+.form-contacto button {
+    margin-top: 10px;
+    align-self: center;
+    padding: 10px 40px;
+    background-color: #0a4d8c;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form-contacto button:hover {
+    background-color: #083a6a;
+}
+
+/* ===============================
    FOOTER
 ================================ */
 footer {
@@ -171,3 +217,4 @@ footer {
         margin: 8px 12px;
     }
 }
+
